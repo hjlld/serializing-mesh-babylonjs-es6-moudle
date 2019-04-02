@@ -1,3 +1,4 @@
+// related post: https://forum.babylonjs.com/t/serializing-mesh-in-es6-module-has-many-problems/2293
 // all the js files require an external module "ts-lib", so they can't be imported directly in browsers in runtime
 // the only way is using some packing software to make the project, like Webpack or Parcel
 
