@@ -31,7 +31,10 @@ let obj = SceneSerializer.SerializeMesh(mesh)
 
 mesh.dispose()
 
-SceneLoader.ImportMesh('mesh', '', 'data:' + JSON.stringify(obj), scene, (meshes) => {
+// When we import mesh from stringfied data, we must not give the new mesh a name,
+// we should always make the first argument `meshNames` as an empty string,
+// otherwise, we'll get an empty array
+SceneLoader.ImportMesh('', '', 'data:' + JSON.stringify(obj), scene, (meshes) => {
     // This is the problem No.4, the meshes is an empty array
     console.log(meshes)
 })
